@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
+
+/* Formatação do corpo e titulos */
+
+body {
+    color: #ffffff;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("/imagens/3d-black-hexagons-c8ju0xil21isq0k8.jpg");
+}
+
+header h1 {
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 21pt;
+    font-weight: lighter;
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+    background: linear-gradient(to right, #000000, #8B0000, #000000);
+}
+
+p#usuarioLogado {
+    text-align: center;
+}
+
+p#usuarioLogado button {
+    text-align: center;
+    cursor: pointer;
+    color: #ffffff;
+    margin-left: 10px;
+    background: none;
+    border: 1px solid #8B0000;
+}
+
+p#usuarioLogado button:hover {
+    color: #FF0000;
+}
+
+
+div#painelClientes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h2 {
+    font-weight: lighter;
+    text-align: center;
+}
+
+/* Formatação do Formulario - Cadastro de clientes */
+
+div#cadastroCliente {
+    height: 50%;
+    padding: 30px;
+    box-shadow: 1px 1px 15px #8B0000;
+}
+
+p#formCliente {
+    font-size: 10pt;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-left: 50px;
+}
+
+caption {
+    font-size: 10pt;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+form#formCliente input {
+    display: flex;
+    width: 240px;
+    height: 25px;
+    color: #ffffff;
+    margin: 0 auto;
+    background: none;
+    border: 1px solid #8B0000;
+}
+
+table#tabelaSetor {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000000;
+}
+
+table#tabelaSetor td {
+    font-size: small;
+    text-align: center;
+    padding: 0px;
+    background: none;
+    border: 1px solid #8B0000;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff1b;
+}
+
+/* Formatação do botão - Salvar */
+
+div#botaoSalvar {
+    padding-top: 20px;
+}
+
+p#botaoSalvar button[type="button"] {
+    width: 330px;
+    height: 50px;
+    color: #ffffff;
+    font-size: 11pt;
+    text-align: center;
+    cursor: pointer;
+    background: none;
+    border: 1px solid #8B0000;
+}
+
+p#botaoSalvar button[type="button"]:hover {
+    color: #ffffff;
+    border: 0px;
+    background: linear-gradient(to right, #000000, #8B0000, #000000);
+}
+
+/* Formatação do painel de empresas */
+
+div#clientes {
+    height: 510px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow-y: scroll;
+    margin-left: 30px;
+    padding: 30px;
+    box-shadow: 1px 1px 15px #8B0000;
+}
+
+div.clientes {
+    margin-bottom: 7px;
+    padding: 10px;
+}
+
+div.editarExcluir {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+button.editar {
+    cursor: pointer;
+    color: #ffffff;
+    background: none;
+    border: 1px solid #8B0000;
+}
+
+button.excluir {
+    cursor: pointer;
+    color: #ffffff;
+    margin-left: 10px;
+    background: none;
+    border: 1px solid #8B0000;
+}
+
+button.editar:hover {
+    color: #008000;
+}
+
+button.excluir:hover {
+    color: #FF0000;
+}
+
+/* Formatação do rodapé */
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    text-align: center;
+}
+
+footer#redeSocial a {
+    text-decoration: none;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+footer#redeSocial a:hover {
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+/* Responsivo */
+
+
+@media (max-width: 905px) {
+
+    body {
+        background-image: url(/imagens/geometric-black-abstract-tk6vyhwr8n38zubk.jpg);
+    }
+
+    div#painelClientes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div#cadastroCliente {
+        padding: 10px;
+    }
+
+    div#clientes {
+        width: 75%;
+        margin: 5vh;
+    }
+
+    div#tabelaLeads {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 5vh;
+    }
+
+    div.empresa {
+        margin-left: 0px;
+    }
+}

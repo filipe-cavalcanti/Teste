@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/clientes.css">
+    <title>Clientes - Alpha Group</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>A L P H A <strong>G R O U P</strong></h1>
+    </header>
+
+    <!-- Painel de clientes -->
+
+    <p id="usuarioLogado">Seja bem-vindo(a) <button type="button" id="deslogar" onclick="logout()">Sair</button></p>
+
+    <div id="painelClientes">
+
+        <div id="cadastroCliente">
+            <h2>Cadastro de clientes</h2>
+            <form id="formCliente">
+                <p id="formCliente"><label for="nome">Nome <strong>*</strong></label></p><input type="text"
+                    class="formCadastro" name="txtName" id="nome" data-index="new" required>
+                <p id="formCliente"><label for="telefone">Telefone <strong>*</strong></label></p><input type="tel"
+                    class="formCadastro" name="txtPhone" id="telefone" maxlength="15" title="Insira o telefone"
+                    onkeyup="mascaraTelefone(event)" required>
+                <p id="formCliente"><label for="e-mail">E-mail <strong>*</strong></label></p><input type="email"
+                    class="formCadastro" name="txtEmail" id="e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    title="Exemplo: email@mail.com" required>
+            </form>
+
+            <table id="tabelaSetor">
+                <caption>Oportunidades <strong>*</strong></caption>
+                <tbody id="setores">
+                    <tr>
+                        <td><input type="checkbox" class="setor" name="oportunidades" id="domesticos"
+                                value="Eletrodomésticos" onclick="marcaDesmarca(this)" checked></td>
+                        <td><label for="domesticos">Eletrodomésticos</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="setor" name="oportunidades" id="tvAudio" value="TV e Áudio"
+                                onclick="marcaDesmarca(this)"></td>
+                        <td><label for="tvAudio">TV e Áudio</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="setor" name="oportunidades" id="smartInfo"
+                                value="Smartphones e Informática" onclick="marcaDesmarca(this)"></td>
+                        <td><label for="smartInfo">Smartphones e Informática</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="setor" name="oportunidades" id="portateisLc"
+                                value="Eletroportáteis e Lista de Casamento" onclick="marcaDesmarca(this)"></td>
+                        <td><label for="portateisLc">Eletroportáteis e Lista de Casamento</label></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div id="botaoSalvar">
+                <p id="botaoSalvar"><button type="button" id="salvar" form="formCliente" onclick="cadastroClientes()">Salvar</button></p>
+            </div>
+        </div>
+
+        <div id="clientes">
+            <h2>Clientes</h2>
+        </div>
+
+    </div>
+
+    <footer id="redeSocial">
+        <p>&copy; filipecavalcantideandrade<br>
+            <a href="https://www.linkedin.com/in/filipecavalcantideandrade" target="blank">LinkedIn</a> |
+            <a href="https://github.com/filipecavalcantideandrade" target="blank"> GitHub</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.all.min.js"></script>
+    <script src="javascript/clientes.js"></script>
+</body>
+
+</html>
