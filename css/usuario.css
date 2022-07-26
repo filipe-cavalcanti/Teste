@@ -7,10 +7,10 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Open Sans', sans-serif;
-    background-image: url("../imagens/fundo1.jpg");
+    background-image: url("../imagens/3d-black-hexagons-c8ju0xil21isq0k8.jpg");
 }
 
-div#container {
+div#telaCadastroUsuario {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -25,6 +25,7 @@ div#cadastroUsuario {
 
 header h1 {
     color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
     font-size: 21pt;
     font-weight: lighter;
     text-align: center;
@@ -98,6 +99,6 @@ footer#redeSocial a:hover {
 @media (max-width: 905px) {
 
     body {
-        background-image: url("../imagens/fundo2.jpg");
+        background-image: url("../imagens/geometric-black-abstract-tk6vyhwr8n38zubk.jpg");
     }
 }

@@ -207,6 +207,7 @@ function logout() {
       if (result.isConfirmed) {
         localStorage.setItem("Acesso", false)
         location.href = "index.html"
+        location.reload()
       }
     })
   }
