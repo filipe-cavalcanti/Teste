@@ -199,7 +199,7 @@ footer#redeSocial a:hover {
 @media (max-width: 905px) {
 
     body {
-        background-image: url("../imagens/fundo2.JPG");
+        background-image: url("../imagens/fundo2.jpg");
     }
 
     div#painelClientes {
