@@ -7,7 +7,7 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Open Sans', sans-serif;
-    background-image: url("/imagens/fundo1.jpg");
+    background-image: url("/imagens/fundo1.JPG");
 }
 
 div#container {
@@ -98,6 +98,6 @@ footer#redeSocial a:hover {
 @media (max-width: 905px) {
 
     body {
-        background-image: url("/imagens/fundo2.jpg");
+        background-image: url("/imagens/fundo2.JPG");
     }
 }
