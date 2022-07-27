@@ -184,8 +184,8 @@ if (localStorage.getItem("Acesso") == "true") {
   }).then((result) => {
     if (result.isConfirmed) {
       location.href = "index.html"
-      location.reload()
     }
+    location.reload()
   })
 }
 
