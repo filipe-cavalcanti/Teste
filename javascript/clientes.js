@@ -173,7 +173,7 @@ if (localStorage.getItem("Acesso") == "true") {
   logado = true;
 } else if (logado != true) {
   document.getElementById("painelClientes").style.display = 'none'
-  Swal.fire({
+  location.reload(Swal.fire({
     icon: 'error',
     iconColor: '#FF0000',
     text: 'Faça o login para ter acesso!',
@@ -185,8 +185,7 @@ if (localStorage.getItem("Acesso") == "true") {
     if (result.isConfirmed) {
       location.href = "index.html"
     }
-    location.reload()
-  })
+  }))
 }
 
 /* Validação logout */
