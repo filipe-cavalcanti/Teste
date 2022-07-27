@@ -7,7 +7,7 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Open Sans', sans-serif;
-    background-image: url("../imagens/3d-black-hexagons-c8ju0xil21isq0k8.jpg");
+    background-image: url("../imagens/fundo1.jpg");
 }
 
 header h1 {
@@ -200,7 +200,7 @@ footer#redeSocial a:hover {
 @media (max-width: 905px) {
 
     body {
-        background-image: url("../imagens/geometric-black-abstract-tk6vyhwr8n38zubk.jpg");
+        background-image: url("../imagens/fundo2.jpg");
     }
 
     div#painelClientes {
