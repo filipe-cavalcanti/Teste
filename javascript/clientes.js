@@ -192,6 +192,7 @@ if (localStorage.getItem("Acesso") == "true") {
 
 function logout() {
   if (logado == true) {
+    location.reload()
     Swal.fire({
       icon: 'warning',
       iconColor: '#FFBF00',
@@ -207,7 +208,6 @@ function logout() {
       if (result.isConfirmed) {
         localStorage.setItem("Acesso", false)
         location.href = "index.html"
-        location.reload()
       }
     })
   }
