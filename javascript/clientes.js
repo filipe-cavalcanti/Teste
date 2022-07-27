@@ -184,6 +184,7 @@ if (localStorage.getItem("Acesso") == "true") {
   }).then((result) => {
     if (result.isConfirmed) {
       location.href = "index.html"
+      location.reload()
     }
   })
 }
@@ -208,7 +209,6 @@ function logout() {
         localStorage.setItem("Acesso", false)
         location.href = "index.html"
       }
-      location.reload()
     })
   }
 }
