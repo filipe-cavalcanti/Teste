@@ -7,7 +7,8 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Open Sans', sans-serif;
-    background-image: url("../imagens/fundo1.jpg");
+    /*background-image: url("../imagens/3d-black-hexagons-c8ju0xil21isq0k8.jpg");*/
+    background-color: #202020;
 }
 
 div#telaCadastroUsuario {
@@ -20,7 +21,7 @@ div#cadastroUsuario {
     height: 50%;
     margin-top: 5vh;
     padding: 30px;
-    box-shadow: 1px 1px 15px #8B0000;
+    box-shadow: 10px 5px 25px #000000;
 }
 
 header h1 {
@@ -31,7 +32,7 @@ header h1 {
     text-align: center;
     margin: 0px;
     padding: 10px;
-    background: linear-gradient(to right, #000000, #8B0000, #000000);
+    box-shadow: 10px 5px 25px #000000;
 }
 
 h2 {
@@ -54,7 +55,7 @@ div#cadastroUsuario input {
     color: #ffffff;
     margin-bottom: 30px;
     background: none;
-    border: 1px solid #8B0000;
+    border: 1px solid #ffffff;
 }
 
 div#cadastroUsuario button#cadastrar {
@@ -65,13 +66,12 @@ div#cadastroUsuario button#cadastrar {
     text-align: center;
     cursor: pointer;
     background: none;
-    border: 1px solid #8B0000;
+    border: 0px;
 }
 
 div#cadastroUsuario button#cadastrar:hover {
     color: white;
-    border: 0px;
-    background: linear-gradient(to right, #000000, #8B0000, #000000);
+    border: 1px solid #ffffff;
 }
 
 /* Formatação do rodapé */
@@ -99,6 +99,6 @@ footer#redeSocial a:hover {
 @media (max-width: 905px) {
 
     body {
-        background-image: url("../imagens/fundo2.jpg");
+        background-image: url("../imagens/geometric-black-abstract-tk6vyhwr8n38zubk.jpg");
     }
 }

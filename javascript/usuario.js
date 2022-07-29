@@ -50,9 +50,11 @@ function cadastroUsuraio() {
     if (getLocalStorage()[i].usuario == usuario) {
       usuarioInvalido = false
       Swal.fire({
+        toast: true,
         icon: 'warning',
-        iconColor: '#FFBF00',
-        text: 'Usuário já cadastrado!',
+        iconColor: '#ffffff',
+        title: 'Usuário já cadastrado!',
+        background: '#f8bb86',
         showConfirmButton: false,
         timer: 1500,
         allowOutsideClick: false,
@@ -61,9 +63,11 @@ function cadastroUsuraio() {
     }
   } if (usuario == "" || senha == "" || confirmarSenha == "") {
     Swal.fire({
+      toast: true,
       icon: 'warning',
-      iconColor: '#FFBF00',
-      text: 'Insira o usuário e senha!',
+      iconColor: '#ffffff',
+      title: 'Insira o usuário e senha!',
+      background: '#f8bb86',
       showConfirmButton: false,
       timer: 1500,
       allowOutsideClick: false,
@@ -71,9 +75,11 @@ function cadastroUsuraio() {
     })
   } else if (senha != confirmarSenha) {
     Swal.fire({
+      toast: true,
       icon: 'warning',
-      iconColor: '#FFBF00',
-      text: 'Senhas diferentes!',
+      iconColor: '#ffffff',
+      title: 'Senhas diferentes!',
+      background: '#f8bb86',
       showConfirmButton: false,
       timer: 1500,
       allowOutsideClick: false,
@@ -81,8 +87,9 @@ function cadastroUsuraio() {
     })
   } else if (usuarioInvalido) {
     Swal.fire({
+      toast: true,
       icon: 'success',
-      text: 'Cadastro efetuado com sucesso!',
+      title: 'Cadastro efetuado com sucesso!',
       confirmButtonText: 'Logar',
       confirmButtonColor: '#008000',
       allowOutsideClick: false,
@@ -109,8 +116,11 @@ function validarLogin() {
       loginInvalido = false
       localStorage.setItem("Acesso", true)
       Swal.fire({
+        toast: true,
         icon: 'success',
-        text: 'Login efetuado com sucesso!',
+        iconColor: '#ffffff',
+        title: 'Logando...',
+        background: '#a5dc86',
         showConfirmButton: false,
         timer: 1500,
         timerProgressBar: true,
@@ -124,9 +134,11 @@ function validarLogin() {
     }
   } if (loginInvalido) {
     Swal.fire({
+      toast: true,
       icon: 'warning',
-      iconColor: '#FFBF00',
-      text: 'Login ou senha errados!',
+      iconColor: '#ffffff',
+      title: 'Login ou senha errados!',
+      background: '#f8bb86',
       showConfirmButton: false,
       timer: 1500,
       allowOutsideClick: false,

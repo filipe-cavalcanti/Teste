@@ -7,7 +7,8 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Open Sans', sans-serif;
-    background-image: url("../imagens/fundo1.jpg");
+    /*background-image: url("../imagens/3d-black-hexagons-c8ju0xil21isq0k8.jpg");*/
+    background-color: #202020;
 }
 
 header h1 {
@@ -18,7 +19,7 @@ header h1 {
     text-align: center;
     margin: 0px;
     padding: 10px;
-    background: linear-gradient(to right, #000000, #8B0000, #000000);
+    box-shadow: 10px 5px 25px #000000;
 }
 
 p#usuarioLogado {
@@ -31,7 +32,7 @@ p#usuarioLogado button {
     color: #ffffff;
     margin-left: 10px;
     background: none;
-    border: 1px solid #8B0000;
+    border: 1px solid #ffffff;
 }
 
 p#usuarioLogado button:hover {
@@ -55,7 +56,7 @@ h2 {
 div#cadastroCliente {
     height: 50%;
     padding: 30px;
-    box-shadow: 1px 1px 15px #8B0000;
+    box-shadow: 10px 5px 25px #000000;
 }
 
 p#formCliente {
@@ -83,7 +84,7 @@ form#formCliente input {
     color: #ffffff;
     margin: 0 auto;
     background: none;
-    border: 1px solid #8B0000;
+    border: 1px solid #ffffff;
 }
 
 table#tabelaSetor {
@@ -97,7 +98,7 @@ table#tabelaSetor td {
     text-align: center;
     padding: 0px;
     background: none;
-    border: 1px solid #8B0000;
+    border: 1px solid #ffffff;
 }
 
 tr:nth-child(even) {
@@ -118,13 +119,13 @@ p#botaoSalvar button[type="button"] {
     text-align: center;
     cursor: pointer;
     background: none;
-    border: 1px solid #8B0000;
+    border: 1px solid #ffffff;
 }
 
 p#botaoSalvar button[type="button"]:hover {
     color: #ffffff;
     border: 0px;
-    background: linear-gradient(to right, #000000, #8B0000, #000000);
+    background-color: #000000;
 }
 
 /* Formatação do painel de empresas */
@@ -137,7 +138,7 @@ div#clientes {
     overflow-y: scroll;
     margin-left: 30px;
     padding: 30px;
-    box-shadow: 1px 1px 15px #8B0000;
+    box-shadow: 10px 5px 25px #000000;
 }
 
 div.clientes {
@@ -155,7 +156,7 @@ button.editar {
     cursor: pointer;
     color: #ffffff;
     background: none;
-    border: 1px solid #8B0000;
+    border: 1px solid #ffffff;
 }
 
 button.excluir {
@@ -163,7 +164,7 @@ button.excluir {
     color: #ffffff;
     margin-left: 10px;
     background: none;
-    border: 1px solid #8B0000;
+    border: 1px solid #ffffff;
 }
 
 button.editar:hover {
@@ -200,7 +201,8 @@ footer#redeSocial a:hover {
 @media (max-width: 905px) {
 
     body {
-        background-image: url("../imagens/fundo2.jpg");
+        /*background-image: url("../imagens/3d-black-hexagons-c8ju0xil21isq0k8.jpg");*/
+        background-color: #202020;
     }
 
     div#painelClientes {

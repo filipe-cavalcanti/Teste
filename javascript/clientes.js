@@ -42,7 +42,7 @@ const saveClient = () => {
     clearFields()
     Swal.fire({
       icon: 'success',
-      text: `Cliente ${client.nome} cadastrado com sucesso!`,
+      title: `Cliente ${client.nome} cadastrado com sucesso!`,
       showConfirmButton: false,
       timer: 1500,
       allowOutsideClick: false,
@@ -54,7 +54,7 @@ const saveClient = () => {
     clearFields()
     Swal.fire({
       icon: 'success',
-      text: `Cliente ${client.nome} atualizado com sucesso!`,
+      title: `Cliente ${client.nome} atualizado com sucesso!`,
       showConfirmButton: false,
       timer: 1500,
       allowOutsideClick: false,
@@ -109,7 +109,7 @@ const editDelete = (event) => {
       Swal.fire({
         icon: 'question',
         iconColor: '#FFBF00',
-        text: `Deseja editar o cliente ${client.nome}`,
+        title: `Deseja editar o cliente ${client.nome}`,
         confirmButtonText: 'Sim',
         confirmButtonColor: '#008000',
         cancelButtonText: 'Não',
@@ -128,7 +128,7 @@ const editDelete = (event) => {
       Swal.fire({
         icon: 'question',
         iconColor: '#FFBF00',
-        text: `Deseja excluir o cliente ${client.nome}`,
+        title: `Deseja excluir o cliente ${client.nome}`,
         confirmButtonText: 'Sim',
         confirmButtonColor: '#008000',
         cancelButtonText: 'Não',
@@ -172,20 +172,7 @@ let logado = false;
 if (localStorage.getItem("Acesso") == "true") {
   logado = true;
 } else if (logado != true) {
-  document.getElementById("painelClientes").style.display = 'none'
-  location.reload(Swal.fire({
-    icon: 'error',
-    iconColor: '#FF0000',
-    text: 'Faça o login para ter acesso!',
-    confirmButtonText: 'Sair',
-    confirmButtonColor: '#FF0000',
-    allowOutsideClick: false,
-    allowEscapeKey: false
-  }).then((result) => {
-    if (result.isConfirmed) {
-      location.href = "index.html"
-    }
-  }))
+  location.href = "index.html"
 }
 
 /* Validação logout */
@@ -193,13 +180,15 @@ if (localStorage.getItem("Acesso") == "true") {
 function logout() {
   if (logado == true) {
     Swal.fire({
+      toast: true,
       icon: 'warning',
-      iconColor: '#FFBF00',
-      text: `Deseja sair?`,
+      iconColor: '#ffffff',
+      title: 'Deseja sair?',
       confirmButtonText: 'Sim',
       confirmButtonColor: '#008000',
       cancelButtonText: 'Não',
       cancelButtonColor: '#FF0000',
+      background: '#f8bb86',
       showCancelButton: true,
       allowOutsideClick: false,
       allowEscapeKey: false
@@ -224,7 +213,8 @@ function cadastroClientes() {
     Swal.fire({
       icon: 'warning',
       iconColor: '#FFBF00',
-      text: 'Insira os dados do Cliente!',
+      title: 'Insira os dados do Cliente!',
+      background: '#f8bb86',
       showConfirmButton: false,
       timer: 1500,
       allowOutsideClick: false,
@@ -234,7 +224,7 @@ function cadastroClientes() {
     Swal.fire({
       icon: 'question',
       iconColor: '#FFBF00',
-      text: 'Deseja incluir o cliente?',
+      title: 'Deseja salvar o cliente?',
       confirmButtonText: 'Sim',
       confirmButtonColor: '#008000',
       cancelButtonText: 'Não',
