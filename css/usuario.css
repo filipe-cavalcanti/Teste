@@ -3,12 +3,12 @@
 /* Formatação do corpo e titulos */
 
 body {
-    color: #ffffff;
+    color: #000000;
     margin: 0px;
     padding: 0px;
     font-family: 'Open Sans', sans-serif;
     /*background-image: url("../imagens/3d-black-hexagons-c8ju0xil21isq0k8.jpg");*/
-    background-color: #202020;
+    background-color: #ffffff;
 }
 
 div#telaCadastroUsuario {
@@ -21,18 +21,18 @@ div#cadastroUsuario {
     height: 50%;
     margin-top: 5vh;
     padding: 30px;
-    box-shadow: 10px 5px 25px #000000;
+    box-shadow: 10px 5px 25px #202020;
 }
 
 header h1 {
-    color: #ffffff;
+    color: #000000;
     font-family: 'Open Sans', sans-serif;
     font-size: 21pt;
     font-weight: lighter;
     text-align: center;
     margin: 0px;
     padding: 10px;
-    box-shadow: 10px 5px 25px #000000;
+    box-shadow: 10px 5px 25px #202020;
 }
 
 h2 {
@@ -52,17 +52,17 @@ div#cadastroUsuario p {
 div#cadastroUsuario input {
     height: 20px;
     display: flex;
-    color: #ffffff;
+    color: #000000;
     margin-bottom: 30px;
     background: none;
-    border: 1px solid #ffffff;
+    border: 1px solid #000000;
 }
 
 div#cadastroUsuario button#cadastrar {
     height: 40px;
     width: 100%;
     font-size: 10pt;
-    color: #ffffff;
+    color: #000000;
     text-align: center;
     cursor: pointer;
     background: none;
@@ -70,8 +70,8 @@ div#cadastroUsuario button#cadastrar {
 }
 
 div#cadastroUsuario button#cadastrar:hover {
-    color: white;
-    border: 1px solid #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
 }
 
 /* Formatação do rodapé */

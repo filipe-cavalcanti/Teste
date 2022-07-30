@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content= "width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="css/clientes.css">
     <title>Clientes - Alpha Group</title>
 </head>
@@ -18,7 +18,10 @@
 
     <!-- Painel de clientes -->
 
-    <p id="usuarioLogado">Seja bem-vindo(a) <button type="button" id="deslogar" onclick="logout()">Sair</button></p>
+    <p id="usuarioLogado"><input type="checkbox" id="modoEscuro" name="tema" onclick="">
+        <label for="modoEscuro">Modo escuro</label></input>
+        <button type="button" id="deslogar" onclick="logout()">Sair</button>
+    </p>
 
     <div id="painelClientes">
 
@@ -62,7 +65,8 @@
             </table>
 
             <div id="botaoSalvar">
-                <p id="botaoSalvar"><button type="button" id="salvar" form="formCliente" onclick="cadastroClientes()">Salvar</button></p>
+                <p id="botaoSalvar"><button type="button" id="salvar" form="formCliente"
+                        onclick="cadastroClientes()">Salvar</button></p>
             </div>
         </div>
 
