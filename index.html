@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content= "width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="css/index.css">
     <title>Login - Alpha Group</title>
 </head>
@@ -18,6 +18,9 @@
 
     <!-- Tela de login -->
 
+    <p id="temaEscuro"><span class="tema">Tema escuro</span><input type="checkbox" id="modoEscuro" name="tema"><label
+            for="modoEscuro"></label></input></p>
+
     <div id="telaLogin">
 
         <div id="login">
@@ -27,7 +30,7 @@
                     id="usuario" title="Digite seu usuário!" placeholder="Digite seu usuário" required>
                 <p><label for="senha">Senha <strong>*</strong></label></p><input type="password" name="password"
                     id="senha" title="Digite sua senha!" placeholder="********" required>
-                    <p id="teste"></p>
+                <p id="teste"></p>
                 <p><a href="usuario.html">Criar novo usuário</a></p>
                 <button type="button" id="entrar" onclick="validarLogin()">Entrar</button>
             </form>

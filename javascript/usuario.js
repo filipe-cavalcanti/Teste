@@ -23,18 +23,24 @@ const creatUser = (client) => {
   setLocalStorage(dbUser)
 }
 
+const isValidFields = () => {
+  return document.getElementById("formCadastroUsuario").reportValidity()
+}
+
 const clearFields = () => {
   const fields = document.querySelectorAll("#formCadastroUsuario")
   fields.forEach(field => field.value = "")
 }
 
 const saveUser = () => {
-  const client = {
-    usuario: document.getElementById("usuario").value,
-    senha: document.getElementById("senha").value
+  if (isValidFields()) {
+    const client = {
+      usuario: document.getElementById("usuario").value,
+      senha: document.getElementById("senha").value
+    }
+    creatUser(client)
+    clearFields()
   }
-  creatUser(client)
-  clearFields()
 }
 
 /* Validação do cadastro */
@@ -46,60 +52,52 @@ function cadastroUsuraio() {
   const confirmarSenha = document.getElementById("confirmarSenha").value
   let usuarioInvalido = true
 
-  for (let i = 0; i < getLocalStorage().length; i++) {
-    if (getLocalStorage()[i].usuario == usuario) {
-      usuarioInvalido = false
+  if (isValidFields()) {
+    for (let i = 0; i < getLocalStorage().length; i++) {
+      if (getLocalStorage()[i].usuario == usuario) {
+        usuarioInvalido = false
+        Swal.fire({
+          toast: true,
+          icon: 'error',
+          title: 'Usuário já cadastrado!',
+          color: '#ffffff',
+          background: '#202020',
+          showConfirmButton: false,
+          timer: 1500,
+          allowOutsideClick: false,
+          allowEscapeKey: false
+        })
+      }
+    } if (senha != confirmarSenha) {
       Swal.fire({
         toast: true,
         icon: 'warning',
-        iconColor: '#ffffff',
-        title: 'Usuário já cadastrado!',
-        background: '#f8bb86',
+        title: 'Senhas diferentes!',
+        color: '#ffffff',
+        background: '#202020',
         showConfirmButton: false,
         timer: 1500,
         allowOutsideClick: false,
         allowEscapeKey: false
       })
+    } else if (usuarioInvalido) {
+      Swal.fire({
+        toast: true,
+        icon: 'success',
+        title: 'Cadastro efetuado com sucesso!',
+        color: '#ffffff',
+        confirmButtonText: 'Logar',
+        confirmButtonColor: '#008000',
+        background: '#202020',
+        allowOutsideClick: false,
+        allowEscapeKey: false
+      }).then((result) => {
+        if (result.isConfirmed) {
+          saveUser()
+          location.href = "index.html"
+        }
+      })
     }
-  } if (usuario == "" || senha == "" || confirmarSenha == "") {
-    Swal.fire({
-      toast: true,
-      icon: 'warning',
-      iconColor: '#ffffff',
-      title: 'Insira o usuário e senha!',
-      background: '#f8bb86',
-      showConfirmButton: false,
-      timer: 1500,
-      allowOutsideClick: false,
-      allowEscapeKey: false
-    })
-  } else if (senha != confirmarSenha) {
-    Swal.fire({
-      toast: true,
-      icon: 'warning',
-      iconColor: '#ffffff',
-      title: 'Senhas diferentes!',
-      background: '#f8bb86',
-      showConfirmButton: false,
-      timer: 1500,
-      allowOutsideClick: false,
-      allowEscapeKey: false
-    })
-  } else if (usuarioInvalido) {
-    Swal.fire({
-      toast: true,
-      icon: 'success',
-      title: 'Cadastro efetuado com sucesso!',
-      confirmButtonText: 'Logar',
-      confirmButtonColor: '#008000',
-      allowOutsideClick: false,
-      allowEscapeKey: false
-    }).then((result) => {
-      if (result.isConfirmed) {
-        saveUser()
-        location.href = "index.html"
-      }
-    })
   }
 }
 
@@ -118,9 +116,9 @@ function validarLogin() {
       Swal.fire({
         toast: true,
         icon: 'success',
-        iconColor: '#ffffff',
         title: 'Logando...',
-        background: '#a5dc86',
+        color: '#ffffff',
+        background: '#202020',
         showConfirmButton: false,
         timer: 1500,
         timerProgressBar: true,
@@ -136,13 +134,75 @@ function validarLogin() {
     Swal.fire({
       toast: true,
       icon: 'warning',
-      iconColor: '#ffffff',
       title: 'Login ou senha errados!',
-      background: '#f8bb86',
+      color: '#ffffff',
+      background: '#202020',
       showConfirmButton: false,
       timer: 1500,
       allowOutsideClick: false,
       allowEscapeKey: false
     })
   }
+}
+
+/* Modo escuro */
+
+const html = document.querySelector("body")
+const checkbox = document.querySelector("input[name=tema]")
+
+const getStyle = (element, style) =>
+  window.getComputedStyle(element).getPropertyValue(style)
+
+const initialColors = {
+  colorText: getStyle(html, "--color-text"),
+  border: getStyle(html, "--border"),
+  background: getStyle(html, "--background")
+}
+
+const darkMode = {
+  colorText: "#ffffff",
+  border: "1px solid #ffffff",
+  background: "#202020"
+}
+
+const transformKey = key => "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
+
+const changeColors = (colors) => {
+  Object.keys(colors).map(key => html.style.setProperty(transformKey(key), colors[key]))
+}
+
+checkbox.addEventListener("change", ({ target }) => {
+  target.checked ? changeColors(darkMode) : changeColors(initialColors)
+})
+
+const isExistLocalStorage = (key) =>
+  localStorage.getItem(key) != null
+
+const createOrEditLocalStorage = (key, value) =>
+  localStorage.setItem(key, JSON.stringify(value))
+
+const getValeuLocalStorage = (key) =>
+  JSON.parse(localStorage.getItem(key))
+
+checkbox.addEventListener("change", ({ target }) => {
+  if (target.checked) {
+    changeColors(darkMode)
+    createOrEditLocalStorage('Modo', 'darkMode')
+    document.querySelector("span.tema").innerHTML = "Tema claro"
+  } else {
+    changeColors(initialColors)
+    createOrEditLocalStorage('Modo', 'initialColors')
+    document.querySelector("span.tema").innerHTML = "Tema escuro"
+  }
+})
+
+if (!isExistLocalStorage('Modo'))
+  createOrEditLocalStorage('Modo', 'initialColors')
+
+if (getValeuLocalStorage('Modo') === "initialColors") {
+  checkbox.removeAttribute('checked')
+  changeColors(initialColors);
+} else {
+  checkbox.setAttribute('checked', "")
+  changeColors(darkMode);
 }

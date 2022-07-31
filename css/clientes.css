@@ -7,9 +7,7 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Open Sans', sans-serif;
-    /*background-image: url("../imagens/3d-black-hexagons-c8ju0xil21isq0k8.jpg");*/
-    /*background-color: #202020;*/
-    background-color: var(--bg);
+    background-color: var(--background);
 }
 
 header h1 {
@@ -17,28 +15,27 @@ header h1 {
     font-size: 21pt;
     font-weight: lighter;
     text-align: center;
-    color: var(--color-headings);
+    color: var(--color-text);
     margin: 0px;
     padding: 10px;
     box-shadow: 10px 5px 25px #000000;
 }
 
-p#usuarioLogado {
+p#temaEscuro {
     display: flex;
     justify-content: center;
-    text-align: center;
+    color: var(--color-text);
 }
 
-p#usuarioLogado button {
-    text-align: center;
-    color: var(--color-text);
+p#temaEscuro button {
     cursor: pointer;
     margin-left: 10px;
+    color: var(--color-text);
     background: none;
-    border: 0;
+    border: 1px solid;
 }
 
-p#usuarioLogado button:hover {
+p#temaEscuro button:hover {
     color: #FF0000;
 }
 
@@ -47,13 +44,12 @@ div#painelClientes {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: var(--bg-panel);
 }
 
 h2 {
     font-weight: lighter;
     text-align: center;
-    color: var(--color-headings);
+    color: var(--color-text);
 }
 
 /* Formatação do Formulário - Cadastro de clientes */
@@ -87,17 +83,16 @@ form#formCliente input {
     display: flex;
     width: 240px;
     height: 25px;
-    color: #ffffff;
+    color: var(--color-text);
     margin: 0 auto;
     background: none;
-    border: 1px solid #ffffff;
+    border: 1px solid;
 }
 
 table#tabelaSetor {
     width: 100%;
-    color: var(--color-headings);
+    color: var(--color-text);
     border-collapse: collapse;
-    border: 1px solid #000000;
 }
 
 table#tabelaSetor td {
@@ -105,12 +100,17 @@ table#tabelaSetor td {
     text-align: center;
     padding: 0px;
     background: none;
-    border: 1px solid #ffffff;
+    border: 1px solid;
 }
 
 tr:nth-child(even) {
-    background-color: #ffffff1b;
+    background-color: #ffffff25;
 }
+
+tr:nth-child(odd) {
+    background-color: #20202025;
+}
+
 
 /* Formatação do botão - Salvar */
 
@@ -121,17 +121,16 @@ div#botaoSalvar {
 p#botaoSalvar button[type="button"] {
     width: 330px;
     height: 50px;
-    color: #ffffff;
+    color: var(--color-text);
     font-size: 11pt;
     text-align: center;
     cursor: pointer;
     background: none;
     border: 0px;
-    color: var(--color-headings);
 }
 
 p#botaoSalvar button[type="button"]:hover {
-    border: 1px solid #000000;
+    border: 1px solid;
 }
 
 /* Formatação do painel de empresas */
@@ -141,6 +140,7 @@ div#clientes {
     display: flex;
     flex-direction: column;
     text-align: center;
+    color: var(--color-text);
     overflow-y: scroll;
     margin-left: 30px;
     padding: 30px;
@@ -160,17 +160,17 @@ div.editarExcluir {
 
 button.editar {
     cursor: pointer;
-    color: #ffffff;
+    color: var(--color-text);
     background: none;
-    border: 1px solid #ffffff;
+    border: 1px solid;
 }
 
 button.excluir {
     cursor: pointer;
-    color: #ffffff;
+    color: var(--color-text);
     margin-left: 10px;
     background: none;
-    border: 1px solid #ffffff;
+    border: 1px solid;
 }
 
 button.editar:hover {
@@ -188,13 +188,13 @@ footer {
     justify-content: center;
     margin-top: 10px;
     text-align: center;
-    color: var(--color-headings);
+    color: var(--color-text);
 }
 
 footer#redeSocial a {
     text-decoration: none;
     margin-top: 10px;
-    color: var(--color-headings);
+    color: var(--color-text);
 }
 
 footer#redeSocial a:hover {
@@ -204,23 +204,22 @@ footer#redeSocial a:hover {
 
 /* Modo escuro */
 
-p#usuarioLogado input[type=checkbox] {
+p#temaEscuro input[type=checkbox] {
     height: 0;
     width: 0;
     visibility: hidden;
 }
 
-p#usuarioLogado label {
+p#temaEscuro label {
     cursor: pointer;
-    text-indent: -9999px;
-    width: 52px;
+    width: 50px;
     height: 27px;
     background-color: #202020;
     border-radius: 100px;
     position: relative;
 }
 
-p#usuarioLogado label::after {
+p#temaEscuro label::after {
     content: '';
     position: absolute;
     top: 3px;
@@ -232,17 +231,17 @@ p#usuarioLogado label::after {
     transition: 0.3s;
 }
 
-p#usuarioLogado input:checked+label {
-    background-color: var(--color-headings);
+p#temaEscuro input:checked+label {
+    background-color: #ffffff;
 }
 
-p#usuarioLogado input:checked+label::after {
+p#temaEscuro input:checked+label::after {
     left: calc(100% - 5px);
     transform: translateX(-100%);
     background-color: #202020
 }
 
-p#usuarioLogado label:active:after {
+p#temaEscuro label:active:after {
     width: 45px;
 }
 
@@ -251,8 +250,7 @@ p#usuarioLogado label:active:after {
 @media (max-width: 905px) {
 
     body {
-        /*background-image: url("../imagens/3d-black-hexagons-c8ju0xil21isq0k8.jpg");*/
-        background-color: #202020;
+        background-color: var(--background);
     }
 
     div#painelClientes {

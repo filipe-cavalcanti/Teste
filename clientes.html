@@ -18,8 +18,8 @@
 
     <!-- Painel de clientes -->
 
-    <p id="usuarioLogado"><input type="checkbox" id="modoEscuro" name="tema" onclick="">
-        <label for="modoEscuro">Modo escuro</label></input>
+    <p id="temaEscuro"><span class="tema">Tema escuro</span><input type="checkbox" id="modoEscuro" name="tema"><label
+            for="modoEscuro"></label></input>
         <button type="button" id="deslogar" onclick="logout()">Sair</button>
     </p>
 
@@ -31,11 +31,12 @@
                 <p id="formCliente"><label for="nome">Nome <strong>*</strong></label></p><input type="text"
                     class="formCadastro" name="txtName" id="nome" data-index="new" required>
                 <p id="formCliente"><label for="telefone">Telefone <strong>*</strong></label></p><input type="tel"
-                    class="formCadastro" name="txtPhone" id="telefone" maxlength="15" title="Insira o telefone"
-                    onkeyup="mascaraTelefone(event)" required>
+                    class="formCadastro" name="txtPhone" id="telefone"
+                    pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" maxlength=" 15"
+                    title="Exemplo: (11) 91234-5678" onkeyup="mascaraTelefone(event)" required>
                 <p id="formCliente"><label for="e-mail">E-mail <strong>*</strong></label></p><input type="email"
                     class="formCadastro" name="txtEmail" id="e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                    title="Exemplo: email@mail.com" required>
+                    title="Exemplo: exemplo@outlook.com" required>
             </form>
 
             <table id="tabelaSetor">

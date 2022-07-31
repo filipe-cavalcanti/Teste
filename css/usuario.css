@@ -7,8 +7,38 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Open Sans', sans-serif;
-    /*background-image: url("../imagens/3d-black-hexagons-c8ju0xil21isq0k8.jpg");*/
-    background-color: #ffffff;
+    background-color: var(--background);
+}
+
+header h1 {
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 21pt;
+    font-weight: lighter;
+    text-align: center;
+    color: var(--color-text);
+    margin: 0px;
+    padding: 10px;
+    box-shadow: 10px 5px 25px #000000;
+}
+
+p#temaEscuro {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-text);
+}
+
+p#temaEscuro button {
+    cursor: pointer;
+    margin-left: 10px;
+    background: none;
+    border: 0;
+}
+
+span.tema {
+    margin-left: 10px;
+    text-align: center;
 }
 
 div#telaCadastroUsuario {
@@ -19,31 +49,21 @@ div#telaCadastroUsuario {
 
 div#cadastroUsuario {
     height: 50%;
-    margin-top: 5vh;
     padding: 30px;
-    box-shadow: 10px 5px 25px #202020;
-}
-
-header h1 {
-    color: #000000;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 21pt;
-    font-weight: lighter;
-    text-align: center;
-    margin: 0px;
-    padding: 10px;
-    box-shadow: 10px 5px 25px #202020;
+    box-shadow: 10px 5px 25px #000000;
 }
 
 h2 {
     font-weight: lighter;
     text-align: center;
+    color: var(--color-text);
 }
 
 /* Formatação dos Inputs */
 
 div#cadastroUsuario p {
     font-size: 10pt;
+    color: var(--color-text);
     margin-bottom: 5px;
     padding-left: 5px;
     padding-bottom: 5px;
@@ -52,17 +72,17 @@ div#cadastroUsuario p {
 div#cadastroUsuario input {
     height: 20px;
     display: flex;
-    color: #000000;
+    color: var(--color-text);
     margin-bottom: 30px;
     background: none;
-    border: 1px solid #000000;
+    border: 1px solid;
 }
 
 div#cadastroUsuario button#cadastrar {
     height: 40px;
     width: 100%;
     font-size: 10pt;
-    color: #000000;
+    color: var(--color-text);
     text-align: center;
     cursor: pointer;
     background: none;
@@ -70,8 +90,8 @@ div#cadastroUsuario button#cadastrar {
 }
 
 div#cadastroUsuario button#cadastrar:hover {
-    color: #000000;
-    border: 1px solid #000000;
+    color: var(--color-text);
+    border: 1px solid;
 }
 
 /* Formatação do rodapé */
@@ -81,12 +101,13 @@ footer {
     justify-content: center;
     margin-top: 10px;
     text-align: center;
+    color: var(--color-text);
 }
 
 footer#redeSocial a {
     text-decoration: none;
     margin-top: 10px;
-    color: #ffffff;
+    color: var(--color-text);
 }
 
 footer#redeSocial a:hover {
@@ -94,11 +115,75 @@ footer#redeSocial a:hover {
     transition: 0.5s;
 }
 
+/* Formatação do rodapé */
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    text-align: center;
+    color: var(--color-text);
+}
+
+footer#redeSocial a {
+    text-decoration: none;
+    margin-top: 10px;
+    color: var(--color-text);
+}
+
+footer#redeSocial a:hover {
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+/* Modo escuro */
+
+p#temaEscuro input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+p#temaEscuro label {
+    cursor: pointer;
+    width: 50px;
+    height: 27px;
+    background-color: #202020;
+    border-radius: 100px;
+    position: relative;
+}
+
+p#temaEscuro label::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+p#temaEscuro input:checked+label {
+    background-color: #ffffff;
+}
+
+p#temaEscuro input:checked+label::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+    background-color: #202020
+}
+
+p#temaEscuro label:active:after {
+    width: 45px;
+}
+
 /* Responsivo */
 
 @media (max-width: 905px) {
 
     body {
-        background-image: url("../imagens/geometric-black-abstract-tk6vyhwr8n38zubk.jpg");
+        background-color: var(--background);
     }
 }

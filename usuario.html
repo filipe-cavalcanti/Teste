@@ -19,21 +19,26 @@
 
     <!-- Tela de cadastro -->
 
+    <p id="temaEscuro"><span class="tema">Tema escuro</span><input type="checkbox" id="modoEscuro" name="tema"><label
+            for="modoEscuro"></label></input></p>
+
     <div id="telaCadastroUsuario">
 
         <div id="cadastroUsuario">
             <h2>Criar usuário</h2>
             <form action="index.html" id="formCadastroUsuario">
                 <p><label for="usuario">Usuário <strong>*</strong></label></p><input type="text" name="username"
-                    id="usuario" placeholder="Digite seu usuário" required>
+                    id="usuario" pattern="([a-z0-9]+)" title="O usuário deve conter apenas letras minúsculas"
+                    placeholder="Digite seu usuário" required>
                 <p><label for="senha">Senha <strong>*</strong></label></p><input type="password" name="password"
                     id="senha" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\W+)(?=^.{8,50}$).*$"
                     title="A senha deve possuir no mínimo 8 caracteres, contendo uma letra maiúscula, um número e um caractere especial."
                     placeholder="********" required>
                 <p><label for="confirmarSenha">Confirmação de senha <strong>*</strong></label></p><input type="password"
                     name="confirmPassword" id="confirmarSenha"
-                    pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\W+)(?=^.{8,50}$).*$" placeholder="********"
-                    required>
+                    pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\W+)(?=^.{8,50}$).*$"
+                    title="A senha deve possuir no mínimo 8 caracteres, contendo uma letra maiúscula, um número e um caractere especial."
+                    placeholder="********" required>
                 <button type="button" id="cadastrar" onclick="cadastroUsuraio()">Cadastrar</button>
             </form>
         </div>

@@ -23,43 +23,55 @@ const creatClient = (client) => {
   setLocalStorage(dbClient)
 }
 
+const isValidFields = () => {
+  return document.getElementById("formCliente").reportValidity()
+}
+
 const clearFields = () => {
   const fields = document.querySelectorAll(".formCadastro")
   fields.forEach(field => field.value = "")
 }
 
 const saveClient = () => {
-  const client = {
-    nome: document.getElementById("nome").value,
-    telefone: document.getElementById("telefone").value,
-    email: document.getElementById("e-mail").value,
-    setor: document.querySelector("input[type='checkbox']:checked").value
-  }
-  const index = document.getElementById("nome").dataset.index
-  if (index == "new") {
-    creatClient(client)
-    updateTable()
-    clearFields()
-    Swal.fire({
-      icon: 'success',
-      title: `Cliente ${client.nome} cadastrado com sucesso!`,
-      showConfirmButton: false,
-      timer: 1500,
-      allowOutsideClick: false,
-      allowEscapeKey: false
-    })
-  } else {
-    updateClient(index, client)
-    updateTable()
-    clearFields()
-    Swal.fire({
-      icon: 'success',
-      title: `Cliente ${client.nome} atualizado com sucesso!`,
-      showConfirmButton: false,
-      timer: 1500,
-      allowOutsideClick: false,
-      allowEscapeKey: false
-    })
+  if (isValidFields()) {
+    const client = {
+      nome: document.getElementById("nome").value,
+      telefone: document.getElementById("telefone").value,
+      email: document.getElementById("e-mail").value,
+      setor: document.querySelector("input[type='checkbox']:checked").value
+    }
+    const index = document.getElementById("nome").dataset.index
+    if (index == "new") {
+      creatClient(client)
+      updateTable()
+      clearFields()
+      Swal.fire({
+        toast: true,
+        icon: 'success',
+        title: `Cliente ${client.nome} cadastrado com sucesso!`,
+        color: '#ffffff',
+        background: '#202020',
+        showConfirmButton: false,
+        timer: 1500,
+        allowOutsideClick: false,
+        allowEscapeKey: false
+      })
+    } else {
+      updateClient(index, client)
+      updateTable()
+      clearFields()
+      Swal.fire({
+        toast: true,
+        icon: 'success',
+        title: `Cliente ${client.nome} atualizado com sucesso!`,
+        color: '#ffffff',
+        background: '#202020',
+        showConfirmButton: false,
+        timer: 1500,
+        allowOutsideClick: false,
+        allowEscapeKey: false
+      })
+    }
   }
 }
 
@@ -107,13 +119,15 @@ const editDelete = (event) => {
     if (action == "edit") {
       const client = readClient()[index]
       Swal.fire({
+        toast: true,
         icon: 'question',
-        iconColor: '#FFBF00',
-        title: `Deseja editar o cliente ${client.nome}`,
+        title: `Editar cliente ${client.nome}?`,
+        color: '#ffffff',
         confirmButtonText: 'Sim',
         confirmButtonColor: '#008000',
         cancelButtonText: 'Não',
         cancelButtonColor: '#FF0000',
+        background: '#202020',
         showCancelButton: true,
         allowOutsideClick: false,
         allowEscapeKey: false
@@ -126,13 +140,15 @@ const editDelete = (event) => {
     } else {
       const client = readClient()[index]
       Swal.fire({
+        toast: true,
         icon: 'question',
-        iconColor: '#FFBF00',
-        title: `Deseja excluir o cliente ${client.nome}`,
+        title: `Excluir cliente ${client.nome}?`,
+        color: '#ffffff',
         confirmButtonText: 'Sim',
         confirmButtonColor: '#008000',
         cancelButtonText: 'Não',
         cancelButtonColor: '#FF0000',
+        background: '#202020',
         showCancelButton: true,
         allowOutsideClick: false,
         allowEscapeKey: false
@@ -149,20 +165,6 @@ const editDelete = (event) => {
 updateTable()
 
 document.querySelector("#clientes").addEventListener("click", editDelete)
-
-/* Validação usuario
-
-function usuarioLogado() {
-  const loginUsuario = document.getElementById("usuario").value
-
-  for (let i = 0; i < getLocalStorage().length; i++) {
-    if (getLocalStorage()[i].usuario) {
-      localStorage.setItem("Usuario", usuario)
-      loginUsuario.getElementById("usuarioLogado").innerHTML = "Seja"
-    }
-  }
-
-}*/
 
 
 /* Validação login */
@@ -181,14 +183,14 @@ function logout() {
   if (logado == true) {
     Swal.fire({
       toast: true,
-      icon: 'warning',
-      iconColor: '#ffffff',
+      icon: 'question',
       title: 'Deseja sair?',
+      color: '#ffffff',
       confirmButtonText: 'Sim',
       confirmButtonColor: '#008000',
       cancelButtonText: 'Não',
       cancelButtonColor: '#FF0000',
-      background: '#f8bb86',
+      background: '#202020',
       showCancelButton: true,
       allowOutsideClick: false,
       allowEscapeKey: false
@@ -209,34 +211,39 @@ function cadastroClientes() {
   const telefone = document.getElementById("telefone").value
   const email = document.getElementById("e-mail").value
 
-  if (nome == "" || telefone == "" || email == "") {
-    Swal.fire({
-      icon: 'warning',
-      iconColor: '#FFBF00',
-      title: 'Insira os dados do Cliente!',
-      background: '#f8bb86',
-      showConfirmButton: false,
-      timer: 1500,
-      allowOutsideClick: false,
-      allowEscapeKey: false
-    })
-  } else {
-    Swal.fire({
-      icon: 'question',
-      iconColor: '#FFBF00',
-      title: 'Deseja salvar o cliente?',
-      confirmButtonText: 'Sim',
-      confirmButtonColor: '#008000',
-      cancelButtonText: 'Não',
-      cancelButtonColor: '#FF0000',
-      showCancelButton: true,
-      allowOutsideClick: false,
-      allowEscapeKey: false
-    }).then((result) => {
-      if (result.isConfirmed) {
-        saveClient()
-      }
-    })
+  if (isValidFields()) {
+    if (nome == "" || telefone == "" || email == "") {
+      Swal.fire({
+        toast: true,
+        icon: 'warning',
+        title: 'Insira os dados do Cliente!',
+        color: '#ffffff',
+        background: '#202020',
+        showConfirmButton: false,
+        timer: 1500,
+        allowOutsideClick: false,
+        allowEscapeKey: false
+      })
+    } else {
+      Swal.fire({
+        toast: true,
+        icon: 'question',
+        title: 'Deseja salvar o cliente?',
+        color: '#ffffff',
+        confirmButtonText: 'Sim',
+        confirmButtonColor: '#008000',
+        cancelButtonText: 'Não',
+        cancelButtonColor: '#FF0000',
+        background: '#202020',
+        showCancelButton: true,
+        allowOutsideClick: false,
+        allowEscapeKey: false
+      }).then((result) => {
+        if (result.isConfirmed) {
+          saveClient()
+        }
+      })
+    }
   }
 }
 
@@ -277,37 +284,59 @@ function marcaDesmarca(caller) {
 const html = document.querySelector("body")
 const checkbox = document.querySelector("input[name=tema]")
 
-const getStyle = (element, style) => 
-    window
-        .getComputedStyle(element)
-        .getPropertyValue(style)
-
+const getStyle = (element, style) =>
+  window.getComputedStyle(element).getPropertyValue(style)
 
 const initialColors = {
-    bg: getStyle(html, "--bg"),
-    bgPanel: getStyle(html, "--bg-panel"),
-    colorHeadings: getStyle(html, "--color-headings"),
-    colorText: getStyle(html, "--color-text"),
+  colorText: getStyle(html, "--color-text"),
+  border: getStyle(html, "--border"),
+  background: getStyle(html, "--background")
 }
 
 const darkMode = {
-    bg: "#202020",
-    bgPanel: "#202020",
-    colorHeadings: "#ffffff",
-    colorText: "#ffffff"
+  colorText: "#ffffff",
+  border: "1px solid #ffffff",
+  background: "#202020"
 }
 
-const transformKey = key => 
-    "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
-
+const transformKey = key => "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
 
 const changeColors = (colors) => {
-    Object.keys(colors).map(key => 
-        html.style.setProperty(transformKey(key), colors[key]) 
-    )
+  Object.keys(colors).map(key => html.style.setProperty(transformKey(key), colors[key]))
 }
 
-
-checkbox.addEventListener("change", ({target}) => {
-    target.checked ? changeColors(darkMode) : changeColors(initialColors)
+checkbox.addEventListener("change", ({ target }) => {
+  target.checked ? changeColors(darkMode) : changeColors(initialColors)
 })
+
+const isExistLocalStorage = (key) =>
+  localStorage.getItem(key) != null
+
+const createOrEditLocalStorage = (key, value) =>
+  localStorage.setItem(key, JSON.stringify(value))
+
+const getValeuLocalStorage = (key) =>
+  JSON.parse(localStorage.getItem(key))
+
+checkbox.addEventListener("change", ({ target }) => {
+  if (target.checked) {
+    changeColors(darkMode)
+    createOrEditLocalStorage('Modo', 'darkMode')
+    document.querySelector("span.tema").innerHTML = "Tema claro"
+  } else {
+    changeColors(initialColors)
+    createOrEditLocalStorage('Modo', 'initialColors')
+    document.querySelector("span.tema").innerHTML = "Tema escuro"
+  }
+})
+
+if (!isExistLocalStorage('Modo'))
+  createOrEditLocalStorage('Modo', 'initialColors')
+
+if (getValeuLocalStorage('Modo') === "initialColors") {
+  checkbox.removeAttribute('checked')
+  changeColors(initialColors);
+} else {
+  checkbox.setAttribute('checked', "")
+  changeColors(darkMode);
+}
