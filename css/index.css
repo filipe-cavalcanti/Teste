@@ -139,7 +139,7 @@ p#temaEscuro input[type=checkbox] {
 p#temaEscuro label {
     position: relative;
     cursor: pointer;
-    width: 50px;
+    width: 3%;
     height: 27px;
     background-color: #202020;
     border-radius: 100px;
@@ -168,8 +168,7 @@ p#temaEscuro input:checked+label::after {
 }
 
 p#temaEscuro label:active:after {
-    width: 45px;
-    transition: 0.3s;
+    
 }
 
 /* Responsivo */
