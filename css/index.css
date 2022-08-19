@@ -179,6 +179,10 @@ p#temaEscuro label:active:after {
         background-color: var(--background);
     }
 
+    h2 {
+        margin-top: 0px;
+    }
+
     div#login {
         padding: 15px;
     }

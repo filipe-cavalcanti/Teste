@@ -48,7 +48,7 @@ div#telaCadastroUsuario {
 
 div#cadastroUsuario {
     height: 50%;
-    padding: 25px;
+    padding: 30px;
     box-shadow: 10px 5px 25px #000000;
 }
 
@@ -170,6 +170,10 @@ p#temaEscuro label:active:after {
 
     body {
         background-color: var(--background);
+    }
+
+    h2 {
+        margin-top: 0px;
     }
 
     div#cadastroUsuario {
