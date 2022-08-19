@@ -50,12 +50,12 @@ function cadastroUsuraio() {
   const usuario = document.getElementById("usuario").value
   const senha = document.getElementById("senha").value
   const confirmarSenha = document.getElementById("confirmarSenha").value
-  let usuarioInvalido = true
+  let usuarioValido = true
 
   if (isValidFields()) {
     for (let i = 0; i < getLocalStorage().length; i++) {
       if (getLocalStorage()[i].usuario == usuario) {
-        usuarioInvalido = false
+        usuarioValido = false
         Swal.fire({
           toast: true,
           icon: 'error',
@@ -80,7 +80,7 @@ function cadastroUsuraio() {
         allowOutsideClick: false,
         allowEscapeKey: false
       })
-    } else if (usuarioInvalido) {
+    } else if (usuarioValido) {
       Swal.fire({
         toast: true,
         icon: 'success',
