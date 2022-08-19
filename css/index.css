@@ -168,6 +168,7 @@ p#temaEscuro input:checked+label::after {
 }
 
 p#temaEscuro label:active:after {
+    width: 45px;
     transition: 0.3s;
 }
 
