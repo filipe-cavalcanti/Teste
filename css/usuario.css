@@ -56,7 +56,6 @@ h2 {
     font-weight: lighter;
     text-align: center;
     color: var(--color-text);
-    margin-top: 0;
 }
 
 /* Formatação dos Inputs */
@@ -171,5 +170,9 @@ p#temaEscuro label:active:after {
 
     body {
         background-color: var(--background);
+    }
+
+    div#cadastroUsuario {
+        padding: 15px;
     }
 }

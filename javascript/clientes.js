@@ -38,7 +38,7 @@ const saveClient = () => {
       nome: document.getElementById("nome").value,
       telefone: document.getElementById("telefone").value,
       email: document.getElementById("e-mail").value,
-      setor: document.querySelector("input[type='checkbox']:checked").value
+      setor: document.querySelector("input[name=oportunidades]:checked").value
     }
     const index = document.getElementById("nome").dataset.index
     if (index == "new") {
@@ -273,7 +273,7 @@ function mascaraTelefone(event) {
 /* Tabela oportunidades (checkbox) */
 
 function marcaDesmarca(caller) {
-  let checks = document.querySelectorAll('input[class=setor]');
+  let checks = document.querySelectorAll("input[name=oportunidades]");
   for (let i = 0; i < checks.length; i++) {
     checks[i].checked = checks[i] == caller;
   }

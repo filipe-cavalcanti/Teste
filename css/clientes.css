@@ -50,14 +50,13 @@ h2 {
     font-weight: lighter;
     text-align: center;
     color: var(--color-text);
-    margin-top: 0;
 }
 
 /* Formatação do Formulário - Cadastro de clientes */
 
 div#cadastroCliente {
     height: 50%;
-    padding: 25px;
+    padding: 30px;
     box-shadow: 10px 5px 25px #000000;
 }
 
@@ -137,7 +136,7 @@ p#botaoSalvar button#salvar:hover {
 /* Formatação do painel de empresas */
 
 div#clientes {
-    height: 480px;
+    height: 510px;
     display: flex;
     flex-direction: column;
     text-align: center;

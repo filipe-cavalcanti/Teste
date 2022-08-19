@@ -48,7 +48,7 @@ div#telaLogin {
 
 div#login {
     height: 50%;
-    padding: 25px;
+    padding: 30px;
     box-shadow: 10px 5px 25px #000000;
 }
 
@@ -57,7 +57,6 @@ h2 {
     font-weight: lighter;
     text-align: center;
     color: var(--color-text);
-    margin-top: 0;
 }
 
 /* Formatação dos Inputs */
@@ -178,5 +177,9 @@ p#temaEscuro label:active:after {
 
     body {
         background-color: var(--background);
+    }
+
+    div#login {
+        padding: 15px;
     }
 }
