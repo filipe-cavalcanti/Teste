@@ -138,7 +138,7 @@ p#temaEscuro input[type=checkbox] {
 
 p#temaEscuro label {
     cursor: pointer;
-    width: 50px;
+    width: 60px;
     height: 27px;
     background-color: #202020;
     border-radius: 100px;
