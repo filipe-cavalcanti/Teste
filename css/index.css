@@ -57,6 +57,7 @@ h2 {
     font-weight: lighter;
     text-align: center;
     color: var(--color-text);
+    margin-top: 0;
 }
 
 /* Formatação dos Inputs */
