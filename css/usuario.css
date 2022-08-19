@@ -48,7 +48,7 @@ div#telaCadastroUsuario {
 
 div#cadastroUsuario {
     height: 50%;
-    padding: 30px;
+    padding: 25px;
     box-shadow: 10px 5px 25px #000000;
 }
 
@@ -56,6 +56,8 @@ h2 {
     font-weight: lighter;
     text-align: center;
     color: var(--color-text);
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Formatação dos Inputs */

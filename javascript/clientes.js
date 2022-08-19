@@ -273,7 +273,7 @@ function mascaraTelefone(event) {
 /* Tabela oportunidades (checkbox) */
 
 function marcaDesmarca(caller) {
-  let checks = document.querySelectorAll('input[type="checkbox"]');
+  let checks = document.querySelectorAll('input[class=setor]');
   for (let i = 0; i < checks.length; i++) {
     checks[i].checked = checks[i] == caller;
   }
