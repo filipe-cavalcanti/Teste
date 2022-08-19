@@ -189,10 +189,12 @@ checkbox.addEventListener("change", ({ target }) => {
     changeColors(darkMode)
     createOrEditLocalStorage('Modo', 'darkMode')
     document.querySelector("span.tema").innerHTML = "Tema claro"
+    location.reload()
   } else {
     changeColors(initialColors)
     createOrEditLocalStorage('Modo', 'initialColors')
     document.querySelector("span.tema").innerHTML = "Tema escuro"
+    location.reload()
   }
 })
 

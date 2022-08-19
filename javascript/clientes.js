@@ -339,10 +339,8 @@ if (getValeuLocalStorage('Modo') === "initialColors") {
   checkbox.removeAttribute('checked')
   changeColors(initialColors);
   document.querySelector("span.tema").innerHTML = "Tema escuro"
-  location.reload()
 } else {
   checkbox.setAttribute('checked', "")
   changeColors(darkMode);
   document.querySelector("span.tema").innerHTML = "Tema claro"
-  location.reload()
 }
