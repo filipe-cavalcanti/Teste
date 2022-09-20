@@ -9,8 +9,7 @@
 .cadastroUsuario {
     height: 50%;
     padding: 30px;
-    border: solid 1px var(--border-box);
-    box-shadow: 3px 3px 5px var(--border-box);
+    border: 1px solid var(--border);
 }
 
 /* Formatação dos Inputs */
@@ -30,6 +29,10 @@
     text-decoration: none;
 }
 
+.cadastroUsuario a:hover {
+    text-decoration: underline;
+}
+
 .cadastroUsuario input {
     height: 20px;
     display: flex;
@@ -47,12 +50,11 @@
     text-align: center;
     cursor: pointer;
     background: none;
-    border: 0px;
+    border: 1px solid;
 }
 
 .cadastroUsuario button#cadastrar:hover {
-    color: var(--color-text);
-    border: 1px solid;
+    text-decoration: underline;
 }
 
 /* Formatação do rodapé */

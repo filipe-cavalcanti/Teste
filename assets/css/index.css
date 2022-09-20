@@ -9,8 +9,7 @@
 .login {
     height: 50%;
     padding: 30px;
-    border: solid 1px var(--border-box);
-    box-shadow: 3px 3px 5px var(--border-box);
+    border: solid 1px var(--border);
 }
 
 /* Formatação dos Inputs */
@@ -53,12 +52,11 @@
     color: var(--color-text);
     cursor: pointer;
     background: none;
-    border: 0px;
+    border: 1px solid;
 }
 
 .login button#entrar:hover {
-    color: var(--color-text);
-    border: 1px solid;
+    text-decoration: underline;
 }
 
 /* Formatação do rodapé */

@@ -59,6 +59,7 @@ function cadastroUsuraio() {
         Swal.fire({
           toast: true,
           icon: 'error',
+          iconColor: '#f27474',
           title: 'Usuário já cadastrado!',
           color: '#ffffff',
           background: '#696969',
@@ -72,6 +73,7 @@ function cadastroUsuraio() {
       Swal.fire({
         toast: true,
         icon: 'warning',
+        iconColor: '#f8bb86',
         title: 'Senhas diferentes!',
         color: '#ffffff',
         background: '#696969',
@@ -84,6 +86,7 @@ function cadastroUsuraio() {
       Swal.fire({
         toast: true,
         icon: 'success',
+        iconColor: '#a5dc86',
         title: 'Cadastro efetuado com sucesso!',
         color: '#ffffff',
         confirmButtonText: 'Logar',
@@ -116,6 +119,7 @@ function validarLogin() {
       Swal.fire({
         toast: true,
         icon: 'success',
+        iconColor: '#a5dc86',
         title: 'Logando...',
         color: '#ffffff',
         background: '#696969',
@@ -134,6 +138,7 @@ function validarLogin() {
     Swal.fire({
       toast: true,
       icon: 'warning',
+      iconColor: '#f8bb86',
       title: 'Login ou senha errados!',
       color: '#ffffff',
       background: '#696969',

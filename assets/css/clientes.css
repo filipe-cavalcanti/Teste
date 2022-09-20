@@ -11,8 +11,7 @@
 .cadastroCliente {
     height: 500px;
     padding: 30px;
-    border: solid 1px var(--border-box);
-    box-shadow: 3px 3px 5px var(--border-box);
+    border: solid 1px var(--border);
 }
 
 #formCliente p {
@@ -70,19 +69,19 @@ tr:nth-child(odd) {
 
 .salvar-sair {
     display: flex;
-    flex-direction: row;
+    justify-content: space-evenly;
     margin-top: 40px;
 }
 
 .btn-salvar-deslogar {
+    width: 70px;
     height: 40px;
-    width: 100%;
     font-size: 10pt;
     text-align: center;
     color: var(--color-text);
     cursor: pointer;
     background: none;
-    border: 0px;
+    border: 1px solid;
 }
 
 #salvar:hover {
@@ -106,21 +105,21 @@ tr:nth-child(odd) {
     overflow-y: scroll;
     margin-left: 30px;
     padding: 30px;
-    border: solid 1px var(--border-box);
-    box-shadow: 3px 3px 5px var(--border-box);
+    border: solid 1px var(--border);
 }
 
 .clientes {
-    margin-bottom: 7px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .editarExcluir {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .editar {
+    width: 70px;
+    height: 40px;
     cursor: pointer;
     color: var(--color-text);
     background: none;
@@ -128,9 +127,10 @@ tr:nth-child(odd) {
 }
 
 .excluir {
+    width: 70px;
+    height: 40px;
     cursor: pointer;
     color: var(--color-text);
-    margin-left: 10px;
     background: none;
     border: 1px solid;
 }

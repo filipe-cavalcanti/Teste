@@ -48,6 +48,7 @@ const saveClient = () => {
       Swal.fire({
         toast: true,
         icon: 'success',
+        iconColor: '#a5dc86',
         title: `Cliente ${client.nome} cadastrado com sucesso!`,
         color: '#ffffff',
         background: '#696969',
@@ -63,6 +64,7 @@ const saveClient = () => {
       Swal.fire({
         toast: true,
         icon: 'success',
+        iconColor: '#a5dc86',
         title: `Cliente ${client.nome} atualizado com sucesso!`,
         color: '#ffffff',
         background: '#696969',
@@ -82,10 +84,10 @@ const creatRow = (client, index) => {
                       <p class="lead">${client.telefone}</p> 
                       <p class="lead">${client.email}</p>
                       <p class="lead">${client.setor}</p>
-                      <p class="editarExcluir">
+                      <div class="editarExcluir">
                         <button type="button" class="editar" id="edit-${index}">Editar</button> 
                         <button type="button" class="excluir" id="delete-${index}">Excluir</button>
-                      </p>`
+                      </div>`
   document.querySelector("#clientes").appendChild(newRow)
 }
 
@@ -121,6 +123,7 @@ const editDelete = (event) => {
       Swal.fire({
         toast: true,
         icon: 'question',
+        iconColor: '#87adbd',
         title: `Editar cliente ${client.nome}?`,
         color: '#ffffff',
         confirmButtonText: 'Sim',
@@ -142,6 +145,7 @@ const editDelete = (event) => {
       Swal.fire({
         toast: true,
         icon: 'question',
+        iconColor: '#87adbd',
         title: `Excluir cliente ${client.nome}?`,
         color: '#ffffff',
         confirmButtonText: 'Sim',
@@ -184,6 +188,7 @@ function logout() {
     Swal.fire({
       toast: true,
       icon: 'question',
+      iconColor: '#87adbd',
       title: 'Deseja sair?',
       color: '#ffffff',
       confirmButtonText: 'Sim',
@@ -216,6 +221,7 @@ function cadastroClientes() {
       Swal.fire({
         toast: true,
         icon: 'warning',
+        iconColor: '#f8bb86',
         title: 'Insira os dados do Cliente!',
         color: '#ffffff',
         background: '#696969',
@@ -228,6 +234,8 @@ function cadastroClientes() {
       Swal.fire({
         toast: true,
         icon: 'question',
+        iconColor: '#87adbd',
+        iconColor: '#87adbd',
         title: 'Deseja salvar o cliente?',
         color: '#ffffff',
         confirmButtonText: 'Sim',
