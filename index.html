@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <title>Login - Alpha Group</title>
 </head>
 
@@ -18,14 +19,10 @@
 
     <!-- Tela de login -->
 
-    <p id="temaEscuro"><span class="tema">Tema escuro</span><input type="checkbox" id="modoEscuro" name="tema"><label
-            for="modoEscuro"></label></input></p>
-
-    <div id="telaLogin">
-
-        <div id="login">
+    <div class="containerLogin">
+        <div class="login">
             <h2>Login</h2>
-            <form action="painelClientes.html" id="formLogin">
+            <form action="painelClientes.html" class="formLogin">
                 <p><label for="usuario">Usuário <strong>*</strong></label></p><input type="text" name="username"
                     id="usuario" title="Digite seu usuário!" placeholder="Digite seu usuário" required>
                 <p><label for="senha">Senha <strong>*</strong></label></p><input type="password" name="password"
@@ -37,16 +34,16 @@
         </div>
     </div>
 
-    <footer id="redeSocial">
+    <footer class="redeSocial">
         <p>&copy; filipecavalcantideandrade<br>
             <a href="https://www.linkedin.com/in/filipecavalcantideandrade" target="blank">LinkedIn</a> |
             <a href="https://github.com/filipecavalcantideandrade" target="blank"> GitHub</a>
         </p>
     </footer>
 
-    <script src="javascript/usuario.js"></script>
-    <script src="javascript/sweetalert2.all.min.js"></script>
-    
+    <script src="assets/js/usuario.js"></script>
+    <script src="assets/js/sweetalert2.all.min.js"></script>
+
 </body>
 
 </html>

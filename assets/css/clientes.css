@@ -1,0 +1,189 @@
+/* Formatação da tela clientes */
+
+.containerPainelClientes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Formatação do Formulário - Cadastro de clientes */
+
+.cadastroCliente {
+    height: 500px;
+    padding: 30px;
+    border: solid 1px var(--border-box);
+    box-shadow: 3px 3px 5px var(--border-box);
+}
+
+#formCliente p {
+    font-size: 10pt;
+    text-align: left;
+    color: var(--color-text);
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+}
+
+.setores {
+    font-size: 10pt;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#formCliente input {
+    display: flex;
+    width: 240px;
+    height: 25px;
+    color: var(--color-text);
+    margin: 0 auto;
+    background: none;
+    border: 1px solid;
+}
+
+.tabelaSetor {
+    width: 100%;
+    color: var(--color-text);
+    border-collapse: collapse;
+}
+
+.tabelaSetor td {
+    font-size: small;
+    text-align: center;
+    padding: 0px;
+    background: none;
+    border: 1px solid;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff25;
+}
+
+tr:nth-child(odd) {
+    background-color: #20202025;
+}
+
+
+/* Formatação do botão - Salvar e Sair */
+
+.salvar-sair {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.btn-salvar-deslogar {
+    height: 40px;
+    width: 100%;
+    font-size: 10pt;
+    text-align: center;
+    color: var(--color-text);
+    cursor: pointer;
+    background: none;
+    border: 0px;
+}
+
+#salvar:hover {
+    color: var(--btn-editar-salvar);
+    border: 1px solid var(--btn-editar-salvar);
+}
+
+#deslogar:hover {
+    color: var(--btn-excluir-sair);
+    border: 1px solid var(--btn-excluir-sair);
+}
+
+/* Formatação do painel de empresas */
+
+#clientes {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--color-text);
+    overflow-y: scroll;
+    margin-left: 30px;
+    padding: 30px;
+    border: solid 1px var(--border-box);
+    box-shadow: 3px 3px 5px var(--border-box);
+}
+
+.clientes {
+    margin-bottom: 7px;
+    padding: 10px;
+}
+
+.editarExcluir {
+    display: flex;
+    justify-content: center;
+}
+
+.editar {
+    cursor: pointer;
+    color: var(--color-text);
+    background: none;
+    border: 1px solid;
+}
+
+.excluir {
+    cursor: pointer;
+    color: var(--color-text);
+    margin-left: 10px;
+    background: none;
+    border: 1px solid;
+}
+
+.editar:hover {
+    color: var(--btn-editar-salvar);
+}
+
+.excluir:hover {
+    color: var(--btn-excluir-sair);
+}
+
+/* Formatação do rodapé */
+
+.redeSocial {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    text-align: center;
+    color: var(--color-text);
+}
+
+.redeSocial a {
+    text-decoration: none;
+    margin-top: 10px;
+    color: var(--color-text);
+}
+
+.redeSocial a:hover {
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+/* Responsividade */
+
+@media (max-width: 905px) {
+
+    .containerPainelClientes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cadastroCliente {
+        padding: 10px;
+    }
+
+    div#clientes {
+        width: 75%;
+        margin: 5vh;
+    }
+
+    .empresa {
+        margin-left: 0px;
+    }
+}

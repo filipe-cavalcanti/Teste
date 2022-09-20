@@ -167,7 +167,7 @@ updateTable()
 document.querySelector("#clientes").addEventListener("click", editDelete)
 
 
-/* Validação login */
+/* Validação de acesso ao cotéudo do site */
 
 let logado = false;
 
@@ -177,7 +177,7 @@ if (localStorage.getItem("Acesso") == "true") {
   location.href = "index.html"
 }
 
-/* Validação logout */
+/* Validação de logout */
 
 function logout() {
   if (logado == true) {
@@ -203,7 +203,7 @@ function logout() {
   }
 }
 
-/* Validação cadastro clientes */
+/* Validação do cadastro de clientes */
 
 function cadastroClientes() {
 
@@ -270,75 +270,11 @@ function mascaraTelefone(event) {
   document.getElementById("telefone").attributes[0].ownerElement['value'] = retorno;
 }
 
-/* Tabela oportunidades (checkbox) */
+/* Tabela de oportunidades (1 por checkbox) */
 
 function marcaDesmarca(caller) {
   let checks = document.querySelectorAll("input[name=oportunidades]");
   for (let i = 0; i < checks.length; i++) {
     checks[i].checked = checks[i] == caller;
   }
-}
-
-/* Modo escuro */
-
-const html = document.querySelector("body")
-const checkbox = document.querySelector("input[name=tema]")
-
-const getStyle = (element, style) =>
-  window.getComputedStyle(element).getPropertyValue(style)
-
-const initialColors = {
-  colorText: getStyle(html, "--color-text"),
-  border: getStyle(html, "--border"),
-  background: getStyle(html, "--background")
-}
-
-const darkMode = {
-  colorText: "#ffffff",
-  border: "1px solid #ffffff",
-  background: "#202020"
-}
-
-const transformKey = key => "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
-
-const changeColors = (colors) => {
-  Object.keys(colors).map(key => html.style.setProperty(transformKey(key), colors[key]))
-}
-
-checkbox.addEventListener("change", ({ target }) => {
-  target.checked ? changeColors(darkMode) : changeColors(initialColors)
-})
-
-const isExistLocalStorage = (key) =>
-  localStorage.getItem(key) != null
-
-const createOrEditLocalStorage = (key, value) =>
-  localStorage.setItem(key, JSON.stringify(value))
-
-const getValeuLocalStorage = (key) =>
-  JSON.parse(localStorage.getItem(key))
-
-checkbox.addEventListener("change", ({ target }) => {
-  if (target.checked) {
-    changeColors(darkMode)
-    createOrEditLocalStorage('Modo', 'darkMode')
-    document.querySelector("span.tema").innerHTML = "Tema claro"
-  } else {
-    changeColors(initialColors)
-    createOrEditLocalStorage('Modo', 'initialColors')
-    document.querySelector("span.tema").innerHTML = "Tema escuro"
-  }
-})
-
-if (!isExistLocalStorage('Modo'))
-  createOrEditLocalStorage('Modo', 'initialColors')
-
-if (getValeuLocalStorage('Modo') === "initialColors") {
-  checkbox.removeAttribute('checked')
-  changeColors(initialColors);
-  document.querySelector("span.tema").innerHTML = "Tema escuro"
-} else {
-  checkbox.setAttribute('checked', "")
-  changeColors(darkMode);
-  document.querySelector("span.tema").innerHTML = "Tema claro"
 }
