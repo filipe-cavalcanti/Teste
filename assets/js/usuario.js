@@ -124,8 +124,7 @@ function validarLogin() {
         color: '#fefefe',
         background: 'var(--color-text-details)',
         showConfirmButton: false,
-        timer: 1500,
-        timerProgressBar: true,
+        timer: 1100,
         allowOutsideClick: false,
         allowEscapeKey: false
       }).then((result) => {

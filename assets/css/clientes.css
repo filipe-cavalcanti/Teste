@@ -1,18 +1,13 @@
 /* Formatação da tela clientes */
 
-.containerPainelClientes {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.cadastroCliente {
+    height: 500px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 /* Formatação do Formulário - Cadastro de clientes */
-
-.cadastroCliente {
-    height: 500px;
-    padding: 30px;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-}
 
 #formCliente p {
     font-size: 10pt;
@@ -84,28 +79,21 @@ tr:nth-child(odd) {
 #salvar {
     font-weight: bold;
     color: var(--color-text-default);
-    background-color: var(--btn-green);
     border: none;
     border-radius: 5px;
+    background-color: var(--btn-green);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
-#salvar:active {
-    transform: translateY(1px);
 }
 
 #deslogar {
-    background-color: var(--color-text-details);
+    font-weight: bold;
     border: none;
     border-radius: 5px;
+    background-color: var(--color-text-details);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-#deslogar:active {
-    transform: translateY(1px);
-}
-
-/* Formatação do painel de empresas */
+/* Formatação do painel de clientes */
 
 #clientes {
     height: 500px;
@@ -113,9 +101,10 @@ tr:nth-child(odd) {
     flex-direction: column;
     text-align: center;
     color: var(--color-text-default);
-    overflow-y: scroll;
     margin-left: 30px;
-    padding: 30px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    overflow-y: scroll;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
@@ -126,7 +115,7 @@ tr:nth-child(odd) {
 .editarExcluir {
     display: flex;
     justify-content: space-evenly;
-    transform: translateY(1px);
+    transform: var(--btn-click);
 }
 
 .editar {
@@ -135,15 +124,11 @@ tr:nth-child(odd) {
     cursor: pointer;
     font-weight: bold;
     color: var(--color-text-default);
-    background: var(--btn-green);
     border: none;
     border-radius: 5px;
+    background-color: var(--btn-green);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
-}
-
-.editar:active {
-    transform: translateY(1px);
 }
 
 .excluir {
@@ -152,49 +137,18 @@ tr:nth-child(odd) {
     cursor: pointer;
     font-weight: bold;
     color: var(--color-text-default);
-    background: var(--btn-red);
     border: none;
     border-radius: 5px;
+    background-color: var(--btn-red);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
-.excluir:active {
-    transform: translateY(1px);
-}
-
-/* Formatação do rodapé */
-
-.redeSocial {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    text-align: center;
-    color: var(--color-text-default);
-}
-
-.redeSocial a {
-    text-decoration: none;
-    margin-top: 10px;
-    color: var(--color-text-default);
-}
-
-.redeSocial a:hover {
-    text-decoration: underline;
-    transition: 0.5s;
 }
 
 /* Responsividade */
 
 @media (max-width: 905px) {
 
-    .containerPainelClientes {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     .cadastroCliente {
-        padding: 10px;
+        padding: 10px 30px;
     }
 
     div#clientes {

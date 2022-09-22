@@ -1,21 +1,59 @@
-/* Formatação da tela login */
+/* Formatação do corpo e titulos */
 
-.containerLogin {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
+
+:root {
+    --color-text-default: #fefefe;
+    --color-text-details: #1b1b1b;
+    --background-color-default: #6d6d6d;
+    --btn-green: #2e7d32;
+    --btn-red: #b24940;
+
+    --btn-click: translateY(3px);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--background-color-default);
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 21pt;
+    font-weight: lighter;
+    text-align: center;
+    color: var(--color-text-default);
+    margin: 0px;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #1b1b1b;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+h2 {
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-text-default);
+}
+
+/* Formatação do Layout */
+
+.container {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.login {
+.usuario {
     height: 50%;
-    padding: 30px;
+    padding: 15px 30px;
     border-radius: 5px;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
-/* Formatação dos Inputs */
-
-.login p {
+.usuario p {
     font-size: 10pt;
     color: var(--color-text-default);
     margin-bottom: 5px;
@@ -23,27 +61,25 @@
     padding-bottom: 5px;
 }
 
-.login a {
+.usuario a {
     display: flex;
     justify-content: center;
     color: var(--color-text-default);
-    margin-top: 77px;
     text-decoration: none;
 }
 
-.login a:hover {
+.usuario a:hover {
     text-decoration: underline;
 }
 
-.login input {
+.usuario input {
     height: 20px;
     display: flex;
     color: var(--color-text-details);
     margin-bottom: 30px;
-    border: 1px solid;
 }
 
-#entrar {
+#entrar, #cadastrar {
     height: 40px;
     width: 100%;
     font-size: 10pt;
@@ -57,8 +93,8 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-#entrar:active {
-    transform: translateY(1px);
+#entrar:active, #cadastrar:active, #deslogar:active, #salvar:active, .editar:active, .excluir:active {
+    transform: var(--btn-click);
 }
 
 /* Formatação do rodapé */
@@ -86,7 +122,18 @@
 
 @media (max-width: 905px) {
 
-    .login {
-        padding: 15px;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        margin-bottom: 25px;
+        padding: 5px;
+    }
+
+    h2 {
+        margin-top: 0px;
     }
 }

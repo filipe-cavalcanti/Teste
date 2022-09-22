@@ -160,6 +160,18 @@ const editDelete = (event) => {
         if (result.isConfirmed) {
           deleteClient(index)
           updateTable()
+          Swal.fire({
+            toast: true,
+            icon: 'success',
+            iconColor: '#a5dc86',
+            title: `Cliente ${client.nome} deletado com sucesso!`,
+            color: 'var(--color-text-default)',
+            background: 'var(--color-text-details)',
+            showConfirmButton: false,
+            timer: 1500,
+            allowOutsideClick: false,
+            allowEscapeKey: false
+          })
         }
       })
     }
