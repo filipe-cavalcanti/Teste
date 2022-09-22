@@ -3,19 +3,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
 
 :root {
-    --color-text: #d7d7d7;
-    --background-color: #202020;
-    --border: #d7d7d7;
-    --btn-salvar: #ffffff;
-    --btn-editar-salvar: #008000;
-    --btn-excluir-sair: #ff0000;
+    --color-text-default: #fefefe;
+    --color-text-details: #1b1b1b;
+    --background-color-default: #6d6d6d;
+    --btn-green: #2e7d32;
+    --btn-red: #b24940;
 }
 
 body {
     margin: 0px;
     padding: 0px;
     font-family: 'Open Sans', sans-serif;
-    background-color: var(--background-color);
+    background-color: var(--background-color-default);
 }
 
 h1 {
@@ -23,16 +22,18 @@ h1 {
     font-size: 21pt;
     font-weight: lighter;
     text-align: center;
-    color: var(--color-text);
+    color: var(--color-text-default);
     margin: 0px;
     margin-bottom: 30px;
     padding: 15px;
+    background-color: #1b1b1b;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 h2 {
-    font-weight: lighter;
+    font-weight: bold;
     text-align: center;
-    color: var(--color-text);
+    color: var(--color-text-default);
 }
 
 /* Responsividade */

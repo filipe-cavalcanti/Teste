@@ -11,13 +11,13 @@
 .cadastroCliente {
     height: 500px;
     padding: 30px;
-    border: solid 1px var(--border);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 #formCliente p {
     font-size: 10pt;
     text-align: left;
-    color: var(--color-text);
+    color: var(--color-text-default);
     margin-top: 10px;
     margin-bottom: 5px;
     padding-top: 10px;
@@ -36,15 +36,14 @@
     display: flex;
     width: 240px;
     height: 25px;
-    color: var(--color-text);
+    color: var(--color-text-details);
     margin: 0 auto;
-    background: none;
     border: 1px solid;
 }
 
 .tabelaSetor {
     width: 100%;
-    color: var(--color-text);
+    color: var(--color-text-default);
     border-collapse: collapse;
 }
 
@@ -57,41 +56,53 @@
 }
 
 tr:nth-child(even) {
-    background-color: #ffffff25;
+    background-color: #424242;
 }
 
 tr:nth-child(odd) {
-    background-color: #20202025;
+    background-color: #1b1b1b;
 }
 
 
 /* Formatação do botão - Salvar e Sair */
 
-.salvar-sair {
+.salvarSair {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
-.btn-salvar-deslogar {
+.salvarDeslogar {
     width: 70px;
-    height: 40px;
+    height: 30px;
     font-size: 10pt;
     text-align: center;
-    color: var(--color-text);
+    color: var(--color-text-default);
     cursor: pointer;
-    background: none;
-    border: 1px solid;
 }
 
-#salvar:hover {
-    color: var(--btn-editar-salvar);
-    border: 1px solid var(--btn-editar-salvar);
+#salvar {
+    font-weight: bold;
+    color: var(--color-text-default);
+    background-color: var(--btn-green);
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-#deslogar:hover {
-    color: var(--btn-excluir-sair);
-    border: 1px solid var(--btn-excluir-sair);
+#salvar:active {
+    transform: translateY(1px);
+}
+
+#deslogar {
+    background-color: var(--color-text-details);
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#deslogar:active {
+    transform: translateY(1px);
 }
 
 /* Formatação do painel de empresas */
@@ -101,11 +112,11 @@ tr:nth-child(odd) {
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: var(--color-text);
+    color: var(--color-text-default);
     overflow-y: scroll;
     margin-left: 30px;
     padding: 30px;
-    border: solid 1px var(--border);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .clientes {
@@ -115,32 +126,40 @@ tr:nth-child(odd) {
 .editarExcluir {
     display: flex;
     justify-content: space-evenly;
+    transform: translateY(1px);
 }
 
 .editar {
     width: 70px;
-    height: 40px;
+    height: 30px;
     cursor: pointer;
-    color: var(--color-text);
-    background: none;
-    border: 1px solid;
+    font-weight: bold;
+    color: var(--color-text-default);
+    background: var(--btn-green);
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+}
+
+.editar:active {
+    transform: translateY(1px);
 }
 
 .excluir {
     width: 70px;
-    height: 40px;
+    height: 30px;
     cursor: pointer;
-    color: var(--color-text);
-    background: none;
-    border: 1px solid;
+    font-weight: bold;
+    color: var(--color-text-default);
+    background: var(--btn-red);
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.editar:hover {
-    color: var(--btn-editar-salvar);
-}
-
-.excluir:hover {
-    color: var(--btn-excluir-sair);
+.excluir:active {
+    transform: translateY(1px);
 }
 
 /* Formatação do rodapé */
@@ -150,13 +169,13 @@ tr:nth-child(odd) {
     justify-content: center;
     margin-top: 10px;
     text-align: center;
-    color: var(--color-text);
+    color: var(--color-text-default);
 }
 
 .redeSocial a {
     text-decoration: none;
     margin-top: 10px;
-    color: var(--color-text);
+    color: var(--color-text-default);
 }
 
 .redeSocial a:hover {
