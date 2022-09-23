@@ -148,7 +148,7 @@ tr:nth-child(odd) {
 @media (max-width: 905px) {
 
     .cadastroCliente {
-        height: 460px;
+        height: 470px;
         padding: 10px 30px;
     }
 

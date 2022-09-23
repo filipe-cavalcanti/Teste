@@ -91,7 +91,7 @@ function cadastroUsuraio() {
         color: '#fefefe',
         background: 'var(--color-text-details)',
         showConfirmButton: false,
-        timer: 1300,
+        timer: 1100,
         allowOutsideClick: false,
         allowEscapeKey: false
       }).then((result) => {
