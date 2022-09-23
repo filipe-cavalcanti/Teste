@@ -87,15 +87,15 @@ function cadastroUsuraio() {
         toast: true,
         icon: 'success',
         iconColor: '#a5dc86',
-        title: 'Cadastro efetuado com sucesso!',
-        color: 'var(--color-text-default)',
-        confirmButtonText: 'Logar',
-        confirmButtonColor: 'var(--btn-green)',
+        title: 'Criando usuário...',
+        color: '#fefefe',
         background: 'var(--color-text-details)',
+        showConfirmButton: false,
+        timer: 1300,
         allowOutsideClick: false,
         allowEscapeKey: false
       }).then((result) => {
-        if (result.isConfirmed) {
+        if (result.isDismissed) {
           saveUser()
           location.href = "index.html"
         }
