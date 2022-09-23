@@ -160,9 +160,13 @@ tr:nth-child(odd) {
         margin-top: 10px;
     }
 
-    div#clientes {
+    .clientes {
+        margin: 10px;
+    }
+
+    #clientes {
         width: 75%;
-        margin: 5vh;
+        margin: 30px;
     }
 
     .empresa {
