@@ -27,7 +27,7 @@ h1 {
     color: var(--color-text-default);
     margin: 0px;
     margin-bottom: 30px;
-    padding: 15px;
+    padding: 10px;
     background-color: #1b1b1b;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
