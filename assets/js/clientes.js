@@ -138,6 +138,11 @@ const editDelete = (event) => {
         if (result.isConfirmed) {
           editClient(index)
           updateTable()
+          scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          })
         }
       })
     } else {
@@ -160,6 +165,11 @@ const editDelete = (event) => {
         if (result.isConfirmed) {
           deleteClient(index)
           updateTable()
+          scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          })
           Swal.fire({
             toast: true,
             icon: 'success',
