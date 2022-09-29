@@ -5,14 +5,16 @@ Projeto criado para colocar em prática a criação de um CRUD em JavaScript, ut
 
 ## :keyboard: Funcionalidades
 * Cadastrar usuário e efetuar login;
-* Cadastrar, atualizar, deletar um cliente e efetuar logout.
+* Cadastrar, atualizar, deletar cliente e efetuar logout.
 
 ## :computer_mouse: Tecnologias
 
-* HTML5 / CSS3 / JavaScript;
+* <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">HTML5</a>
+* <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">CSS3</a>
+* <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">JavaScript</a>
 
 ## :printer: Biblioteca
-* <a href="https://sweetalert2.github.io" target="_blank" rel="noreferrer">SweetAlert2.</a>
+* <a href="https://sweetalert2.github.io" target="_blank" rel="noreferrer">SweetAlert2</a>
 
 ## :electric_plug: Status do projeto
 Projeto finalizado
