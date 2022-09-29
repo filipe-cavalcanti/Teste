@@ -19,4 +19,4 @@ Projeto criado para colocar em prática a criação de um CRUD em JavaScript, ut
 Este projeto esta sobe a licença [MIT](./LICENSE).
 
 ## 👨🏻‍💻 Autor
-Feito com ❤️ por Filipe Cavalcanti 👋🏻 [Entre em contato](https://www.linkedin.com/in/filipecavalcantideandrade/)!
+Feito com ❤️ por [Filipe Cavalcanti de Andrade](https://www.linkedin.com/in/filipecavalcantideandrade/) 👋🏻
