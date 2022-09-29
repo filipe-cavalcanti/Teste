@@ -80,10 +80,10 @@ const saveClient = () => {
 const creatRow = (client, index) => {
   const newRow = document.createElement("div")
   newRow.classList.add("clientes")
-  newRow.innerHTML = `<p class="lead">${client.nome}</p> 
-                      <p class="lead">${client.telefone}</p> 
-                      <p class="lead">${client.email}</p>
-                      <p class="lead">${client.setor}</p>
+  newRow.innerHTML = `<p class="cliente">${client.nome}</p> 
+                      <p class="cliente">${client.telefone}</p> 
+                      <p class="cliente">${client.email}</p>
+                      <p class="cliente">${client.setor}</p>
                       <div class="editarExcluir">
                         <button type="button" class="editar" id="edit-${index}">Editar</button> 
                         <button type="button" class="excluir" id="delete-${index}">Excluir</button>

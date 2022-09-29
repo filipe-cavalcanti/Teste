@@ -165,10 +165,10 @@ tr:nth-child(odd) {
     }
 
     #clientes {
-        width: 75%;
+        width: 300px;
         margin: 30px;
     }
-
+    
     .empresa {
         margin-left: 0px;
     }
