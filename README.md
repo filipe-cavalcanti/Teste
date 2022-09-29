@@ -7,6 +7,12 @@ Projeto criado para colocar em prática a criação de um CRUD em JavaScript, ut
 * Cadastrar usuário e efetuar login;
 * Cadastrar, atualizar, deletar um cliente e efetuar logout.
 
-## :computer_mouse: Tecnologias utilizadas
+## :computer_mouse: Tecnologias
+
 * HTML5 / CSS3 / JavaScript;
+
+## :printer: Biblioteca
 * <a href="https://sweetalert2.github.io" target="_blank" rel="noreferrer">SweetAlert2.</a>
+
+## :electric_plug: Status do projeto
+Projeto finalizado
