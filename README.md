@@ -16,8 +16,10 @@ Projeto criado para colocar em prática a criação de um CRUD em JavaScript, ut
 ## 🖨️ Biblioteca
 * <a href="https://sweetalert2.github.io" target="_blank" rel="noreferrer">SweetAlert2</a>
 
-## 👨🏻‍💻 Autor & Licença 📝
+## 📝 Licença
 
 Este projeto esta sobe a licença [MIT](./LICENSE).
+
+## 👨🏻‍💻 Autor
 
 Feito com ❤️ por Filipe Cavalcanti 👋🏻 [Entre em contato!](https://www.linkedin.com/in/filipecavalcantideandrade/)
