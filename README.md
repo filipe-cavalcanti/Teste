@@ -9,8 +9,4 @@ Projeto criado para colocar em prática a criação de um CRUD em JavaScript uti
 
 ## :wrench: Tecnologias utilizadas
 * HTML5 / CSS3 / JavaScript
-* <a href="https://sweetalert2.github.io" target="_blank" rel="noreferrer"> SweetAlert2 </a>
-
-## :dart: Status do projeto
-
-Projeto finalizado.
+* <a href="https://sweetalert2.github.io" target="_blank" rel="noreferrer">SweetAlert2</a>
